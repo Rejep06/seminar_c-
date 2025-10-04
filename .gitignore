@@ -1,0 +1,10 @@
+*.o
+*.exe
+
+build/
+res/
+
+.tags
+
+.vscode/
+.cache/2

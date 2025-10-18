@@ -59,7 +59,7 @@ class EventQueue {
             cout << "Очередь пуста!\n";
             return;
         }
-        UserEvent event = userqueue.front();
+        UserEvent event = userqueue.back();
         cout << "Пользователь " << event.surname << " покинул очередь.\n";
         cout << "Время в очереди до ухода: " << time - event.hour * 60 - event.minute << " минут.\n";
         userqueue.pop_back();

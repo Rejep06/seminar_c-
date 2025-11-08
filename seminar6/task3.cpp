@@ -4,30 +4,34 @@ using namespace std;
 
 class Counter {
     static int cnt;
+    static int cntCur;
 
    public:
     Counter() {
         cnt++;
+        cntCur++;
     }
 
     Counter(const Counter& other) {
         cnt++;
+        cntCur++;
     }
 
     ~Counter() {
-        cnt--;
+        cntCur--;
     }
 
-    int getCount() {
+    static int getCount() {
         return cnt;
     }
 
     static int getCurrentCount() {
-        return cnt;
+        return cntCur;
     }
 };
 
 int Counter::cnt = 0;
+int Counter::cntCur = 0;
 
 int main() {
     Counter c1;
@@ -38,5 +42,6 @@ int main() {
         Counter c5;
     }
     cout << Counter::getCurrentCount() << '\n';
+    cout << Counter::getCount() << '\n';
     return 0;
 }

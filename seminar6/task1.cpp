@@ -29,6 +29,8 @@ int main() {
     cin >> text;
     FileGuard myfile(path);
     myfile.Write(text);
+    // FileGuard copy = myfile;
+    // copy.Write("Hi");
 
     try {
         FileGuard testFile("/invalid/path/file.txt");
